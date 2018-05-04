@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "colorme_public_api"
 require 'pry'
+require 'dotenv/load'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -14,5 +15,5 @@ RSpec.configure do |config|
 end
 
 def access_token
-  "ACCESS_TOKEN"
+  ENV.fetch('ACCESS_TOKEN', 'a'*5)
 end
