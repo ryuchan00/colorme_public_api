@@ -14,6 +14,13 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
-def access_token
+def test_access_token
   ENV.fetch('ACCESS_TOKEN', 'a'*5)
+end
+
+def build_config(args={})
+  config = ColormePublicApi::Configuration.new
+
+  # No default value
+  config.access_token = args[:access_token] || test_access_token
 end

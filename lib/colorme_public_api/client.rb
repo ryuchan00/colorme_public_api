@@ -6,5 +6,9 @@ module ColormePublicApi
     def initialize(config = ColormePublicApi::Configuration.default)
       @configuration = config.dup
     end
+
+    def shop
+      @shop ||= ColormePublicApi::Endpoint::V1::Shop.new(@configuration)
+    end
   end
 end

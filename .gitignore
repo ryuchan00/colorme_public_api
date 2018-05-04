@@ -16,3 +16,6 @@ mkmf.log
 .env
 .ruby-version
 vendor/bundle
+
+# rspec failure tracking
+.rspec_status
