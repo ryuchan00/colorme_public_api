@@ -1,5 +1,5 @@
-require "faraday"
-# require "colorme_public_api/endpoint"
+require 'faraday'
+require 'colorme_public_api/endpoint'
 
 module ColormePublicApi
   class Client
