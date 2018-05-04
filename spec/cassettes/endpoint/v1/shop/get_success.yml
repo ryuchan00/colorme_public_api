@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.shop-pro.jp/v1/shop.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - " Bearer [ACCESS_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 04 May 2018 15:27:04 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      etag:
+      - W/"8b8519f4bfbe051d1d0e4cffbb3b3d9c"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - ac1edb06-fb45-416e-a5a6-8d0e63173209
+      x-runtime:
+      - '0.145673'
+    body:
+      encoding: UTF-8
+      string: '{"shop":{"id":"PA01409388","state":"unsigned","domain_plan":"cmsp_sub_domain","contract_plan":"regular","contract_start_date":1517583600,"contract_end_date":1551279600,"contract_term":12,"contract_payment_state":"unpaid","last_login_date":1525415063,"setup_date":1515046135,"make_date":1515046135,"url":"https://curry-pizza.shop-pro.jp","open_state":"opened","mobile_open_state":"closed","login_id":"curry-pizza","name1":"","name2":"","name1_kana":"","name2_kana":"","hojin":"","hojin_kana":"","user_mail":"[MAIL_ADDRESS]","tel":"--","fax":null,"postal":"","pref_id":null,"pref_name":null,"address1":"","address2":"","title":"curry-pizza","title_short":"curry-pizza","shop_mail_1":"[MAIL_ADDRESS]","shop_mail_2":null}}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 15:27:04 GMT
+recorded_with: VCR 4.0.0

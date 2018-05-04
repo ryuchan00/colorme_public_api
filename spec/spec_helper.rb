@@ -14,6 +14,25 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
+require 'vcr'
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/cassettes"
+  config.hook_into :faraday
+
+  config.filter_sensitive_data('[ACCESS_TOKEN]') do
+    test_access_token
+  end
+
+  config.filter_sensitive_data('[MAIL_ADDRESS]') do
+    test_mail_address
+  end
+end
+
+def test_mail_address
+  ENV.fetch('MAIL_ADDRESS', 'example@mail.com')
+end
+
 def test_access_token
   ENV.fetch('ACCESS_TOKEN', 'a'*5)
 end

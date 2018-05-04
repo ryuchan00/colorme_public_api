@@ -15,8 +15,8 @@ module ColormePublicApi
           response = @connection.get do |req|
             req.url(request_url(path))
             req.headers['Content-Type'] = 'application/json'
-            req.headers['Authorization'] = access_token
-            req.body = params.to_json
+            req.headers['Authorization'] = ' Bearer ' + access_token
+            req.params.merge!(params) if params
           end
           JSON.parse(response.body)
         end
