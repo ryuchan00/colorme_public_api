@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.shop-pro.jp/v1/sales.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - " Bearer [ACCESS_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Sat, 05 May 2018 11:35:10 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      etag:
+      - W/"a12693324841df055d381341c641b3f2"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - a6a3821f-4373-4c59-92a8-ec9f39571b0c
+      x-runtime:
+      - '0.021515'
+    body:
+      encoding: UTF-8
+      string: '{"sales":[],"meta":{"total":0,"limit":10,"offset":0}}'
+    http_version: 
+  recorded_at: Sat, 05 May 2018 11:35:11 GMT
+recorded_with: VCR 4.0.0

@@ -10,5 +10,9 @@ module ColormePublicApi
     def shop
       @shop ||= ColormePublicApi::Endpoint::V1::Shop.new(@configuration)
     end
+
+    def sales
+      @shop ||= ColormePublicApi::Endpoint::V1::Sales.new(@configuration)
+    end
   end
 end
