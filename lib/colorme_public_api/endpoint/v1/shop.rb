@@ -2,8 +2,8 @@ module ColormePublicApi
   module Endpoint
     module V1
       class Shop < Base
-        def get_shop(access_token:, params: nil)
-          get(
+        def get(access_token:, params: nil)
+          super(
             path: '/v1/shop.json',
             access_token: access_token,
             params: params
