@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Sat, 05 May 2018 07:56:37 GMT
+      - Sat, 05 May 2018 09:06:33 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,12 +33,12 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 7d199ec6-185d-4cb0-b343-594dd29bc3e1
+      - 3454cd44-477c-41c0-ab56-e4aa64ee539d
       x-runtime:
-      - '0.020407'
+      - '0.021822'
     body:
       encoding: UTF-8
       string: '{"shop":{"id":"PA01409388","domain_plan":"cmsp_sub_domain"}}'
     http_version: 
-  recorded_at: Sat, 05 May 2018 07:56:37 GMT
+  recorded_at: Sat, 05 May 2018 09:06:33 GMT
 recorded_with: VCR 4.0.0

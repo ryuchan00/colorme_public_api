@@ -3,7 +3,7 @@ describe ColormePublicApi::Endpoint::V1::Shop do
     let(:client) { ColormePublicApi::Client.new(build_config) }
 
     context 'no parameter' do
-      subject (:response) { client.shop.get(access_token: test_access_token) }
+      subject (:response) { client.shop.get_shop(access_token: test_access_token) }
 
       before do
         VCR.use_cassette('endpoint/v1/shop/no_parameter_success') do
@@ -21,7 +21,7 @@ describe ColormePublicApi::Endpoint::V1::Shop do
         fields: 'id,domain_plan'
       } }
 
-      subject (:response) { client.shop.get(access_token: test_access_token, params: params) }
+      subject (:response) { client.shop.get_shop(access_token: test_access_token, params: params) }
 
       before do
         VCR.use_cassette('endpoint/v1/shop/have_parameters_success') do
