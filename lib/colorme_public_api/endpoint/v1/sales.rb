@@ -9,6 +9,14 @@ module ColormePublicApi
             params: params
           )
         end
+
+        def get_sales_stat(access_token:, params: nil)
+          get(
+            path: '/v1/stat.json',
+            access_token: access_token,
+            params: params
+          )
+        end
       end
     end
   end

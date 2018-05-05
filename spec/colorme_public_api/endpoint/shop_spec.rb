@@ -1,5 +1,5 @@
 describe ColormePublicApi::Endpoint::V1::Shop do
-  describe '#get' do
+  describe '#get_shop' do
     let(:client) { ColormePublicApi::Client.new(build_config) }
 
     context 'no parameter' do
