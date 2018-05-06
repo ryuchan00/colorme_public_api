@@ -73,9 +73,10 @@ describe ColormePublicApi::Endpoint::V1::Sales do
 
   describe '#get_sales_id' do
     let(:client) { ColormePublicApi::Client.new(build_config) }
+    let(:id) { '85245031' }
 
     context 'no parameter' do
-      subject (:response) { client.sales.get_sales_id(access_token: test_access_token) }
+      subject (:response) { client.sales.get_sales_id(id: id, access_token: test_access_token) }
 
       before do
         VCR.use_cassette('endpoint/v1/sales/get_sales_id/no_parameter_success') do
@@ -84,7 +85,7 @@ describe ColormePublicApi::Endpoint::V1::Sales do
       end
 
       it 'succeeds' do
-        expect(response['sales_stat'].is_a?(Hash)).to be true
+        expect(response['sale']['id'].to_s).to eq id
       end
     end
   end
