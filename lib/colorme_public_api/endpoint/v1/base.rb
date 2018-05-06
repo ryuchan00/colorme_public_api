@@ -21,6 +21,16 @@ module ColormePublicApi
           JSON.parse(response.body)
         end
 
+        def put(path:, access_token:, params: nil)
+          response = @connection.put do |req|
+            req.url(request_url(path))
+            req.headers['Content-Type'] = 'application/json'
+            req.headers['Authorization'] = ' Bearer ' + access_token
+            req.body =  params
+          end
+          JSON.parse(response.body)
+        end
+
         def request_url(path)
           URI.join(api_endpoint, path).to_s
         end

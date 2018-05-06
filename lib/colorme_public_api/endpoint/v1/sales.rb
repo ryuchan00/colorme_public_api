@@ -24,6 +24,14 @@ module ColormePublicApi
             access_token: access_token
           )
         end
+
+        def put_sales_id(id:, access_token:, params:)
+          put(
+            path: "v1/sales/#{id}.json",
+            access_token: access_token,
+            params: params
+          )
+        end
       end
     end
   end

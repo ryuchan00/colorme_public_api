@@ -90,4 +90,27 @@ describe ColormePublicApi::Endpoint::V1::Sales do
       end
     end
   end
+
+  describe '#put_sales_id' do
+    let(:client) { ColormePublicApi::Client.new(build_config) }
+    # カセットを作り直す時は、APIサーバー側に存在するsales_idにする。
+    let(:id) { '85245031' }
+    let(:params) {
+      '{"sale": "sale_deliveries": {"name": "spec name","furigana": "スペック　ネーム"}}'
+    }
+
+    context 'no parameter' do
+      subject (:response) { client.sales.put_sales_id(id: id, access_token: test_access_token, params: params) }
+
+      before do
+        VCR.use_cassette('endpoint/v1/sales/put_sales_id/no_parameter_success') do
+          response
+        end
+      end
+
+      it 'succeeds' do
+        expect(response['sale']['id'].to_s).to eq id
+      end
+    end
+  end
 end
