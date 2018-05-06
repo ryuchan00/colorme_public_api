@@ -73,6 +73,7 @@ describe ColormePublicApi::Endpoint::V1::Sales do
 
   describe '#get_sales_id' do
     let(:client) { ColormePublicApi::Client.new(build_config) }
+    # カセットを作り直す時は、APIサーバー側に存在するsales_idにする。
     let(:id) { '85245031' }
 
     context 'no parameter' do
