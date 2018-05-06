@@ -1,7 +1,7 @@
 describe ColormePublicApi::Endpoint::V1::Sales do
-  describe '#get_sales' do
-    let(:client) { ColormePublicApi::Client.new(build_config) }
+  let(:client) { ColormePublicApi::Client.new(build_config) }
 
+  describe '#get_sales' do
     context 'no parameter' do
       subject (:response) { client.sales.get_sales(access_token: test_access_token) }
 
@@ -18,8 +18,6 @@ describe ColormePublicApi::Endpoint::V1::Sales do
   end
 
   describe '#get_sales_stat' do
-    let(:client) { ColormePublicApi::Client.new(build_config) }
-
     context 'no parameter' do
       subject (:response) { client.sales.get_sales_stat(access_token: test_access_token) }
 
@@ -36,8 +34,6 @@ describe ColormePublicApi::Endpoint::V1::Sales do
   end
 
   describe '#get_sales_stat' do
-    let(:client) { ColormePublicApi::Client.new(build_config) }
-
     context 'no parameter' do
       subject (:response) { client.sales.get_sales_stat(access_token: test_access_token) }
 
@@ -54,8 +50,6 @@ describe ColormePublicApi::Endpoint::V1::Sales do
   end
 
   describe '#get_sales_stat' do
-    let(:client) { ColormePublicApi::Client.new(build_config) }
-
     context 'no parameter' do
       subject (:response) { client.sales.get_sales_stat(access_token: test_access_token) }
 
@@ -72,7 +66,6 @@ describe ColormePublicApi::Endpoint::V1::Sales do
   end
 
   describe '#get_sales_id' do
-    let(:client) { ColormePublicApi::Client.new(build_config) }
     # カセットを作り直す時は、APIサーバー側に存在するsales_idにする。
     let(:id) { '85245031' }
 
@@ -92,7 +85,6 @@ describe ColormePublicApi::Endpoint::V1::Sales do
   end
 
   describe '#put_sales_id' do
-    let(:client) { ColormePublicApi::Client.new(build_config) }
     # カセットを作り直す時は、APIサーバー側に存在するsales_idにする。
     let(:id) { '85245031' }
     let(:params) {
@@ -100,7 +92,7 @@ describe ColormePublicApi::Endpoint::V1::Sales do
         sale: {
           paid: true,
           sale_deliveries: [{
-            name: "test deliver"
+            name: 'test deliver'
           }]
         }
       }
