@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.shop-pro.jp/v1/sales/85245031/mails.json
+    body:
+      encoding: UTF-8
+      string: '{"mail":{"type":"accepted"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - " Bearer [ACCESS_TOKEN]"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 06 May 2018 14:59:22 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 3a0cc643-a4d4-4ee4-a25e-004876d6d15e
+      x-runtime:
+      - '0.431185'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 06 May 2018 14:59:22 GMT
+recorded_with: VCR 4.0.0

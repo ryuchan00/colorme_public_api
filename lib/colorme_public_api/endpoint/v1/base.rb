@@ -26,9 +26,19 @@ module ColormePublicApi
             req.url(request_url(path))
             req.headers['Content-Type'] = 'application/json'
             req.headers['Authorization'] = ' Bearer ' + access_token
-            req.body =  params.to_json
+            req.body = params.is_a?(String) ? params : params.to_json
           end
-          JSON.parse(response.body)
+          response.body.empty?  ? nil : JSON.parse(response.body)
+        end
+
+        def post(path:, access_token:, params: nil)
+          response = @connection.post do |req|
+            req.url(request_url(path))
+            req.headers['Content-Type'] = 'application/json'
+            req.headers['Authorization'] = ' Bearer ' + access_token
+            req.body = params.is_a?(String) ? params : params.to_json
+          end
+          response.body.empty?  ? nil : JSON.parse(response.body)
         end
 
         def request_url(path)

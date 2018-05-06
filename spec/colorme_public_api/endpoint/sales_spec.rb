@@ -112,4 +112,30 @@ describe ColormePublicApi::Endpoint::V1::Sales do
       end
     end
   end
+
+  describe '#post_sales_id_mail' do
+    # カセットを作り直す時は、APIサーバー側に存在するsales_idにする。
+    let(:id) { '85245031' }
+    let(:params) {
+      {
+        mail: {
+          type: 'accepted'
+        }
+      }
+    }
+
+    context 'no parameter' do
+      subject (:response) { client.sales.post_sales_id_mails(id: id, access_token: test_access_token, params: params) }
+
+      before do
+        VCR.use_cassette('endpoint/v1/sales/post_sales_id_mails/no_parameter_success') do
+          response
+        end
+      end
+
+      it 'succeeds' do
+        expect(response.nil?).to eq true
+      end
+    end
+  end
 end

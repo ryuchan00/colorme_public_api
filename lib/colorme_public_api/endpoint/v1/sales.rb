@@ -32,6 +32,14 @@ module ColormePublicApi
             params: params
           )
         end
+
+        def post_sales_id_mails(id:, access_token:, params:)
+          post(
+            path: "v1/sales/#{id}/mails.json",
+            access_token: access_token,
+            params: params
+          )
+        end
       end
     end
   end
