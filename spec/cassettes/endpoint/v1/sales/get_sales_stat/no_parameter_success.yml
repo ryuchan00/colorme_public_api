@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.shop-pro.jp/v1/sales/stat.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - " Bearer [ACCESS_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 06 May 2018 07:51:39 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      etag:
+      - W/"50e9b34e67646591b7702770446dace6"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 93af91ae-2e01-412c-87d1-51d282377218
+      x-runtime:
+      - '0.028038'
+    body:
+      encoding: UTF-8
+      string: '{"sales_stat":{"account_id":"PA01409388","date":1525593099,"amount_today":0,"count_today":0,"amount_last_7days":0,"count_last_7days":0,"amount_this_month":0,"count_this_month":0}}'
+    http_version: 
+  recorded_at: Sun, 06 May 2018 07:51:45 GMT
+recorded_with: VCR 4.0.0
