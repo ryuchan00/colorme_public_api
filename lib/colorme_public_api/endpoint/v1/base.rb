@@ -26,7 +26,7 @@ module ColormePublicApi
             req.url(request_url(path))
             req.headers['Content-Type'] = 'application/json'
             req.headers['Authorization'] = ' Bearer ' + access_token
-            req.body =  params
+            req.body =  params.to_json
           end
           JSON.parse(response.body)
         end

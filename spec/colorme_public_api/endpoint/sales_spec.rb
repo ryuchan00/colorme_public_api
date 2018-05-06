@@ -96,7 +96,14 @@ describe ColormePublicApi::Endpoint::V1::Sales do
     # カセットを作り直す時は、APIサーバー側に存在するsales_idにする。
     let(:id) { '85245031' }
     let(:params) {
-      '{"sale": "sale_deliveries": {"name": "spec name","furigana": "スペック　ネーム"}}'
+      {
+        sale: {
+          paid: true,
+          sale_deliveries: [{
+            name: "test deliver"
+          }]
+        }
+      }
     }
 
     context 'no parameter' do

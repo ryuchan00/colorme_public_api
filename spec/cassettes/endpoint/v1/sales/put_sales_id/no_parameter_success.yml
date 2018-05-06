@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.shop-pro.jp/v1/sales/85245031.json
+    body:
+      encoding: UTF-8
+      string: '{"sale":{"paid":true,"sale_deliveries":[{"name":"test deliver"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - " Bearer [ACCESS_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 06 May 2018 10:04:03 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      etag:
+      - W/"4210b08afe4a8c6b4274a4ad2d630676"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - f1e652e1-0388-4069-b9e3-85dc6d4e79dc
+      x-runtime:
+      - '0.069149'
+    body:
+      encoding: UTF-8
+      string: '{"sale":{"id":85245031,"account_id":"PA01409388","make_date":1525593445,"update_date":1525599914,"memo":null,"payment_id":783178,"mobile":false,"paid":true,"delivered":false,"canceled":false,"accepted_mail_state":"not_yet","paid_mail_state":"not_yet","delivered_mail_state":"not_yet","point_state":"assumed","gmo_point_state":"assumed","yahoo_point_state":"assumed","product_total_price":1,"delivery_total_charge":0,"tax":0,"fee":300,"noshi_total_charge":0,"card_total_charge":0,"wrapping_total_charge":0,"point_discount":0,"gmo_point_discount":0,"other_discount":0,"other_discount_name":"","total_price":301,"granted_points":0,"use_points":0,"granted_gmo_points":0,"use_gmo_points":0,"granted_yahoo_points":0,"use_yahoo_points":0,"accepted_mail_sent_date":null,"paid_mail_sent_date":null,"delivered_mail_sent_date":null,"customer":{"id":62566581,"account_id":"PA01409388","name":"\u30c6\u30b9\u30c8","furigana":null,"hojin":null,"busho":null,"sex":null,"postal":"1680073","pref_id":13,"pref_name":"\u6771\u4eac\u90fd","address1":"\u6749\u4e26\u533a\u4e0b\u9ad8\u4e95\u62382-7-11","address2":null,"mail":"[MAIL_ADDRESS]","tel":"09072324013","fax":null,"tel_mobile":null,"memo":"","other":null,"points":0,"member":false,"sales_count":1},"details":[{"id":205803431,"sale_id":85245031,"account_id":"PA01409388","product_id":127494152,"sale_delivery_id":87199944,"option1_value":null,"option2_value":null,"option1_index":0,"option2_index":0,"product_model_number":null,"product_name":"niku","product_cost":0,"product_image_url":"http://img21.shop-pro.jp/PA01409/388/product/127494152.png?cmsp_timestamp=20180124182359","product_thumbnail_image_url":"http://img21.shop-pro.jp/PA01409/388/product/127494152_th.png?cmsp_timestamp=20180124182359","product_mobile_image_url":"http://img21.shop-pro.jp/PA01409/388/product/127494152_mb.jpg?cmsp_timestamp=20180124182359","price":1,"price_with_tax":1,"product_num":1,"unit":null,"subtotal_price":1}],"sale_deliveries":[{"id":87199944,"account_id":"PA01409388","sale_id":85245031,"delivery_id":448403,"detail_ids":[205803431],"memo":"\u30c6\u30b9\u30c8\u3067\u3059","delivered":false,"name":"\u30c6\u30b9\u30c8","furigana":"","postal":"100000","pref_id":13,"pref_name":"\u6771\u4eac\u90fd","address1":"\u5343\u4ee3\u7530\u533a\u5343\u4ee3\u75301-1-1","address2":"","tel":"09011111111","preferred_date":null,"preferred_period":null,"slip_number":"","noshi_text":null,"noshi_charge":0,"card_name":null,"card_text":null,"card_charge":0,"wrapping_name":null,"wrapping_charge":0,"delivery_charge":0,"total_charge":1}]}}'
+    http_version: 
+  recorded_at: Sun, 06 May 2018 10:04:09 GMT
+recorded_with: VCR 4.0.0
